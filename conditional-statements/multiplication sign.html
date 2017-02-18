@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles-console/js-console.css" />
+    </head>
+<body>
+    <label for="tb-first">First number: </label>
+    <input type="text" id="tb-first"/>
+    <!--a href="#" onclick="onIsNumberButtonClick('#tb-first')"> Is a number</a-->
+    <br />
+
+    <label for="tb-second" >Second number</label>
+    <input type="text" id="tb-second" />
+    <!--a href="#" onclick="onIsNumberButtonClick('#tb-second')">Is a number</a-->
+    <br />
+
+    <label for="tb-third" >Second number</label>
+    <input type="text" id="tb-third" />
+ <br />
+    <a href="#" onclick="multiplication()">Find bigger</a>
+    <div id="console"></div> <!--text area = console-->
+
+    <script src="scripts-console/js-console.js"></script>
+
+    <script>
+    function multiplication(){
+        let a = jsConsole.readFloat('#tb-first'),
+            b = jsConsole.readFloat('#tb-second'),
+            c = jsConsole.readFloat('#tb-third');
+
+            if(Math.sign(a*b*c) > 0){
+                jsConsole.writeLine('+');
+            }
+            else {
+                jsConsole.writeLine('-');
+            }
+         }
+    
+
+    </script>
+</body>
+</html>
