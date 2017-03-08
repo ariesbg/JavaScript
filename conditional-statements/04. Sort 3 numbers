@@ -1,0 +1,28 @@
+Sort 3 numbers
+Description
+
+Sort 3 real values in descending order. Use nested if statements.
+
+Note: Don’t use arrays and the built-in sorting functionality.
+Input
+
+    The input will consist of an array containing three values represented as strings
+
+Output
+
+    The output should be a single line containing three numbers separated by spaces
+
+Constraints
+
+    Time limit: 0.2s
+    Memory limit: 16MB
+
+Sample tests
+Sample test 1
+Input
+
+['5', '1', '2']
+
+Output
+
+5 2 1
