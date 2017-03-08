@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles-console/js-console.css" />
+    </head>
+<body>
+    <label for="tb-first">First number: </label>
+    <input type="text" id="tb-first"/>
+    <br />
+
+    <label for="tb-second" >Second number</label>
+    <input type="text" id="tb-second" />
+    <br />
+
+    <label for="tb-third" >Third number</label>
+    <input type="text" id="tb-third" />
+    <br />
+
+    <a href="#" onclick="findResult()">Find the number</a>
+    <div id="console"></div> <!--console-->
+
+    <script src="scripts-console/js-console.js"></script>
+    <script>
+        function findResult(){
+         let a = jsConsole.readFloat('#tb-first');
+         let b = jsConsole.readFloat('#tb-second');
+         let c = jsConsole.readFloat('#tb-third');
+
+         
+        if (a > b && b > c )
+        {
+            jsConsole.writeLine("The descending order is: " + a + " "+ b +" " + c );
+        }
+        else if (c > b && b > a)
+        {
+            jsConsole.writeLine("The descending order is: " + c +" " + b + " " + a);
+        }
+        else if (a > c && b < c)
+        {
+            jsConsole.writeLine("The descending order is: " + a + " " +c + " " +b);
+        }
+        else if (b > c && c > a)
+        {
+            jsConsole.writeLine("The descending order is: " + b+ " " +c+ " "+ a);
+        }
+        else if (b > a && a > c)
+        {
+            jsConsole.writeLine("The descending order is: " + b+ " "+ a+ " "+ c);
+        }
+        else if (c > a && a > b)
+        {
+            jsConsole.writeLine("The descending order is: " + c+ " "+ a+ " "+ b);
+        }
+        else if (a == b || b == c)
+        {
+            if (a > c)
+            {
+                jsConsole.writeLine("The descending order is: " + a + " " + b + " " + c);
+            }
+            else if (a < c)
+            {
+                jsConsole.writeLine("The descending order is: " + c + " "+ b + " " + a);
+            }
+            else if (a==c)
+            {
+                jsConsole.writeLine("The descending order is: " + a + " " + b + " " + c);
+            } 
+        }
+        if (a == c && b > a)
+            {
+                jsConsole.writeLine("The descending order is: " + b + " "+ a + " " + c);
+            }
+        else if (a == c && b < a)
+        {
+            jsConsole.writeLine("The descending order is: " + a + " "+ b + " " + c);
+        }
+       
+    }
+
+    </script>    
+   
+</body>
+</html>
