@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles-console/js-console.css" />
+</head>
+
+<body>
+    <label for="tb-first">Number: </label>
+    <input type="text" id="tb-first" />
+    <br />
+
+    <label for="tb-second">Number: </label>
+    <input type="text" id="tb-second" />
+    <br />
+
+    <label for="tb-third">Number: </label>
+    <input type="text" id="tb-third" />
+    <br />
+
+    <a href="#" onclick="findResult()">Show the real roots</a>
+    <div id="console"></div>
+    <!--console-->
+
+    <script src="scripts-console/js-console.js"></script>
+    <script>
+        function findResult() {
+             let a = jsConsole.readFloat("#tb-first"); 
+             let b = jsConsole.readFloat("#tb-second"); 
+             let c = jsConsole.readFloat("#tb-third");
+             let x1;
+             let x2;
+             let determinant;
+
+            
+
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+			    jsConsole.writeLine("a, b, c must be a number");
+			}
+            else {
+                 jsConsole.writeLine(a + "x^2 + " + b + "x + " + c + "= 0");
+
+                 if (a != 0) {
+			        determinant = b * b - 4 * a * c;
+			        if (determinant > 0) {
+			            x1 = (-b + Math.sqrt(determinant)) / (2 * a);
+			            x2 = (-b - Math.sqrt(determinant)) / (2 * a);
+			            jsConsole.writeLine("x1= " + x1 + "; x2= " + x2);
+			        }
+			        if (determinant == 0) {
+			            x1 = (-b) / (2 * a);
+			            jsConsole.writeLine("x1,2 = " + x1);
+			        }
+			        if (determinant < 0) {
+			            jsConsole.writeLine("There is no real roots");
+			        }
+			    }
+			    else if(b != 0)
+				{
+			        x1 = (-c) / b;
+			        jsConsole.writeLine("x1,2 = " + x1);
+			    }
+				else
+				{
+					jsConsole.writeLine("No quadratic equation");
+				}
+            }
+        }
+    </script>
+
+</body>
+
+</html>
