@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles-console/js-console.css" />
+    </head>
+<body>
+    <label for="tb-first">First number: </label>
+    <input type="text" id="tb-first"/>
+    <br />
+
+    <label for="tb-second" >Second number</label>
+    <input type="text" id="tb-second" />
+    <br />
+
+    <label for="tb-third" >Third number</label>
+    <input type="text" id="tb-third" />
+    <br />
+
+    <a href="#" onclick="findResult()">Find the number</a>
+    <div id="console"></div> <!--console-->
+
+    <script src="scripts-console/js-console.js"></script>
+    <script>
+        function findResult(){
+         let first = jsConsole.readFloat('#tb-first');
+         let second = jsConsole.readFloat('#tb-second');
+         let third = jsConsole.readFloat('#tb-third');
+         let theBiggestNum = Math.max(first, second, third);
+
+         jsConsole.writeLine("the biggest of three numbers is: " + theBiggestNum );
+        } 
+
+    
+    </script>    
+   
+</body>
+</html>
