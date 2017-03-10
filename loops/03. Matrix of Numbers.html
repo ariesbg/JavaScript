@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles-console/js-console.css" />
+    </head>
+<body>
+    <label for="tb-first">Write a number: </label>
+    <input type="text" id="tb-first"/>
+    <!--a href="#" onclick="onIsNumberButtonClick('#tb-first')"> Is a number</a-->
+    <br />
+<!--
+    <label for="tb-second">Write a number: </label>
+    <input type="text" id="tb-second"/>
+    <!--a href="#" onclick="onIsNumberButtonClick('#tb-first')"> Is a number</a-->
+    <!--br />
+
+    <label for="tb-third">Write a number: </label>
+    <input type="text" id="tb-third"/>
+    <!--a href="#" onclick="onIsNumberButtonClick('#tb-first')"> Is a number</a-->
+    <!--br />-->
+
+    <a href="#" onclick="result()">Print the result</a>
+    <div id="console"></div> <!--text area-->
+
+    <script src="scripts-console/js-console.js"></script>
+
+    <script>
+        
+        jsConsole.writeLine('Write a positiv integer number 1 <= N <= 20!');
+        let a = jsConsole.readFloat('#tb-first');
+
+        
+    function result(){
+        for(var i = 0; i <= a; i++){
+                for(var j = i + 1; j <= a; j++){
+                   jsConsole.write(j+ ' '); 
+                }
+                            jsConsole.writeLine(i);
+
+            }
+    }
+
+    </script>
+</body>
+</html>
