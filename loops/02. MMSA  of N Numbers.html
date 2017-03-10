@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles-console/js-console.css" />
+    </head>
+<body>
+    <label for="tb-first">Write a number: </label>
+    <input type="text" id="tb-first"/>
+    <br />
+
+    <label for="tb-second">Write a number: </label>
+    <input type="text" id="tb-second"/>
+    <br />
+
+    <label for="tb-third">Write a number: </label>
+    <input type="text" id="tb-third"/>
+    <br />
+
+    <a href="#" onclick="result()">Print the numbers</a>
+    <div id="console"></div> <!--text area-->
+
+    <script src="scripts-console/js-console.js"></script>
+
+    <script>
+    function result(){
+         let a = jsConsole.readFloat('#tb-first');
+         let b = jsConsole.readInteger('#tb-second');
+         let c = jsConsole.readInteger('#tb-third');
+         const min = Math.min(a,b,c);
+         const max = Math.max(a, b, c);
+         const sum = a + b + c;
+         const average = sum / 3;
+
+         jsConsole.writeLine('min = ' + min.toFixed(2));
+         jsConsole.writeLine('max = ' + max.toFixed(2));
+         jsConsole.writeLine('sum = ' + sum.toFixed(2));
+         jsConsole.writeLine('average = ' + average.toFixed(2));
+    }
+
+    </script>
+</body>
+</html>
