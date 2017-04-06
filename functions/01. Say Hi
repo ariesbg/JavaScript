@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #result{
+            color: darkblue;
+        }
+   
+    </style>
+</head>
+
+<body>
+  <input type="text" id="name" placeholder="Write your name:" /><br>
+ <button type="submit" id="btn" onclick="go()">Go!</button><br>
+ <span id="result"></span>
+
+<script>
+    function go(){
+        let input = document.getElementById('name').value;
+        document.getElementById('result').innerHTML = input;
+    }
+</script>
+</body>
+
+</html>
+
+<!--Write a method that asks the user for his name and prints Hello, <name>!. Write a program to test this method.-->
