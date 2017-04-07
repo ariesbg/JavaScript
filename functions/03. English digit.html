@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>dobre</title>
+    <style>
+        #result{
+            color: blueviolet;
+        }
+   
+    </style>
+</head>
+
+<body>
+Write an integer: <input type="text" id="input" /><br>
+ <button type="submit" id="btn" onclick="go()">Go!</button><br>
+ <span id="result"></span><br>
+ <span id="result1"></span><br>
+ <span id="result2"></span><br>
+
+<script>
+   function go(){
+       var number = document.getElementById('input').value;
+        //document.getElementById('result').innerHTML = number;
+        var x = number % 10;
+        // document.getElementById('result1').innerHTML = x;
+    switch (x){
+        case 0:return 'zero',
+        document.getElementById('result2').innerHTML = 'zero';
+        case 1:return 'one',
+        document.getElementById('result2').innerHTML = 'one';
+        case 2:return 'two',
+         document.getElementById('result2').innerHTML = 'two';
+        case 3:return 'three',
+        document.getElementById('result2').innerHTML = 'three';
+        case 4:return'four',
+        document.getElementById('result2').innerHTML = 'four';
+        case 5: return'five',
+        document.getElementById('result2').innerHTML = 'five';
+        case 6:return 'six',
+        document.getElementById('result2').innerHTML = 'six';
+        case 7:return 'seven',
+        document.getElementById('result2').innerHTML = 'seven';
+        case 8:return 'eight',
+        document.getElementById('result2').innerHTML = 'eight';
+        case 9:return 'nine',
+        document.getElementById('result2').innerHTML = 'nine';
+        default:return 'Not a digit',
+         document.getElementById('result2').innerHTML = 'Not a number';
+   } 
+   }
+   
+</script>
+</body>
+
+</html>
+
+<!--Write a method that returns the last digit of given integer as an English word. Write a program that reads a number and prints the result of the method.-->
