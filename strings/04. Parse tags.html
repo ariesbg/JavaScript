@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   <link rel="javascript" type="text/javascript" href="test.js" />
+    <style>
+
+   
+    </style>
+</head>
+
+<body>
+<!--<p id="promter">Enter a URL</p><br>
+<input type="text" id="input" size="25" /><br><br>
+<button onclick="doit()" onsubmit="return false">Submit</button>
+<br><br>
+Result
+<br><br>
+<span id="output"></span>-->
+Text:
+<p id="original">We are <orgcase>liViNg</orgcase> in a <upcase id="upperCase">yellow submarine</upcase>.
+ We <orgcase>doN\'t</orgcase> have <lowcase id="lowerCase">anything</lowcase> else.</p>
+
+<button onclick="click()">Click me</button><br><br>
+Result:
+ <p id="result"></p>
+<script>
+    function click(){
+       var unput1 = document.getElementById('upperCase').value;
+       var input2 = document.getElementById('lowerCase').value;
+       var up = input1.toUpperCase();
+       var down = input2.toLowerCase();
+
+       document.getElementById('result').innerHTML = 'We are liViNg in a ' + up + ' . We doN\'t have ' + down + 'else.';
+    }
+</script>
+</body>
+
+</html>
