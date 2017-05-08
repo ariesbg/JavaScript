@@ -10,15 +10,9 @@ for (var i = 0; i < url.length; i++){
     var indexRes = url.indexOf('/', endIndex);
 
     if (index) { 
-
-        if (url.substring(endIndex, indexRes))  {
-            var result2 = url.substr(index + 2, endIndex - 3);
-        }   
-            else if (url.substring(endIndex, indexRes) == 2) {
-            var result2 = url.substr(index + 2, endIndex + 3);
-        } 
-   }
-   var result3 = url.substr(indexRes, url.length);
+        var result2 = url.substr(index + 2, endIndex - 3);
+    }
+    var result3 = url.substr(indexRes, url.length);
 }
 console.log('protocol: ' + result1);
 console.log('server: ' + result2);
